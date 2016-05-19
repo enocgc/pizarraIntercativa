@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>Foods World</title>
+  <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/ghpages-materialize.css">
+  <link rel="stylesheet" type="text/css" href="css/icon.css">
+  <link rel="stylesheet" type="text/css" href="css/prism.css">
+  <link rel="stylesheet" type="text/css" href="css/inconsolata.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="lib/jq.min.js"></script>
+   
+</head>
+<body>
+
+
+<script type="text/x-handlebars" data-template-name="actualizar">
+
+
+
+<div class="contenedorNuevaReceta">
+<form method="POST" action="php/update.php">
+  <h3>Nombre de receta</h3>
+  <input name="receta"placeholder="Receta">
+  
+  <h3>Pais de origen</h3>
+  <input name="lugar"placeholder="Pais de origen">
+
+  <div class="contenedordatosreceta row container">
+  
+
+<div class="col s12 m5 ">
+<h3 >Ingredientes</h3>
+  <textarea value=ingrediente name="ingrediente"class="textArea-datos col s5 m5" placeholder="Ingredientes de la receta"></textarea>
+  </div>
+  <div class="col s12 m5">
+  <h3 >Procedimiento</h3>
+  <textarea value=procedi name="procedimiento"class="textArea-datos " placeholder="Procedimeintos para la receta"></textarea>
+  </div>
+  </div>
+  <input class="btn btn succesful"type="submit" value="Actualizar receta">
+</form>
+</div>
+
+
+
+
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+ 
+   <div class="background">
+   <div class="contenedorEliminar">
+   <table>
+     <tr>
+     <td>
+       <form method="POST" action="php/delete.php">
+        <input name="numero2"  placeholder="ID de la receta" />
+      <tr><td><button type="submit"class="btn btn-warning">Eliminar Esta receta</button></td></tr>
+       </form>
+     </td>
+     </tr>
+     <tr>
+       <td><button  style="width: 100%;"class="btn">{{#link-to 'nueva-receta'}}<span style="color: white;">Nueva receta</span>{{/link-to}}</button>
+    </td>
+     </tr>
+     <tr>
+       <td><button  style="width: 100%;"class="btn">{{#link-to 'actualizar'}}<span style="color: white;">Actualizar receta</span>{{/link-to}}</button>
+    </td>
+     </tr>
+   </table>
+   
+    </div>
+ 
+<div class="">
+
+ <div class="contenedorTitulos section scrollspy contenedorRecetas">
+
+            <ul id="ulRecetas"class="collapsible collapsible-accordion" data-collapsible="accordion">
+           
+            </ul>
+         
+</div>
+</div>
+</div>
+
+</script>
+
+
+
+
+
+<script type="text/x-handlebars" data-template-name="nueva-receta">
+
+
+<div class="contenedorNuevaReceta">
+<form method="POST" action="php/insert.php">
+  <h3>Nombre de receta</h3>
+  <input name="receta"placeholder="Nombre de la receta">
+  
+  <h3>Pais de origen</h3>
+  <input name="lugar"placeholder="Pais de origen">
+
+  <div class="contenedordatosreceta row container">
+  
+
+<div class="col s12 m5 ">
+<h3 >Ingredientes</h3>
+  <textarea name="ingrediente"class="textArea-datos col s5 m5" placeholder="Ingredientes de la receta"></textarea>
+  </div>
+  <div class="col s12 m5">
+  <h3 >Procedimiento</h3>
+  <textarea name="procedimiento"class="textArea-datos " placeholder="Procedimeintos para la receta"></textarea>
+  </div>
+  </div>
+  <input class="btn btn succesful"type="submit" value="Agregar receta">
+  <p>{{#link-to 'index'}}Volver{{/link-to}}</p>
+</form>
+</div>
+
+
+</script>
+
+
+
+
+<!-- script de enlacer -->
+
+<script type="text/javascript" src="models/comida.js"></script>
+    
+	<script type="text/javascript" src="lib/handlebars-v4.0.5.js"></script>
+	<script type="text/javascript" src="lib/ember2.3.2.js"></script>
+	<script type="text/javascript" src="lib/ember-template-compiler.js"></script>
+
+  <script type="text/javascript" src="js/router.js"></script>
+<script type="text/javascript" src="js/conexion.js"></script>
+    <script src="lib/jquery.timeago.min.js"></script>
+    <script src="lib/prism.js"></script>
+    <script src="lib/lunr.min.js"></script>
+    <script src="lib/search.js"></script>
+    <script src="lib/materialize.js"></script>
+    <script src="lib/init.js"></script>
+   
+
+	<!-- <script src="assets/js/jquery-2.1.4.min.js"></script> -->
+   
+</body>
+</html>

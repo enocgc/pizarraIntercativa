@@ -1,0 +1,76 @@
+
+{{#link-to 'login'}}
+ <p class="login"> Login</p>
+  {{/link-to}}
+
+
+ <div class="contenedorTitulos titulo">
+   <table>
+     <tr class="filtros">
+       <td> Buscar Receta: <input /></td>
+       <td> Buscar por Pais: <input /></td>
+     </tr>
+     <tr>
+                  <td><i class="material-icons">label_outline</i>  Numero de Receta</td>
+                  <td><i class="material-icons">assignment</i>  Nombre</td>
+                  <td><i class="material-icons">my_location</i>  Lugar</td>
+                </tr>  
+   </table>
+
+ </div>
+
+ <div class="contenedorTitulos section scrollspy contenedorRecetas">
+
+            <ul class="collapsible collapsible-accordion" data-collapsible="accordion">
+           
+              
+
+                {{#each model as | comida|}}
+              <li>
+                <table class="collapsible-header">                
+                <tr>
+                  <td><i class="material-icons">label_outline</i>{{comida.numero}}</td>
+                  <td><i class="material-icons">assignment</i>{{comida.receta}}</td>
+                  <td><i class="material-icons">my_location</i>{{comida.pais}}</td>
+                </tr>                
+                </table>
+                <div class="collapsible-body">
+                  <table class="contenedorTabla">
+                    <th>Ingredientes </th>
+                    <th>Pasos </th>
+                    <tr>  <td> {{comida.ingredientes}} </td>
+                      <td> {{comida.procedimientos}}</td>
+                    </tr>
+                  </table>
+                </div>
+
+              </li>
+              {{/each}}
+
+
+               <li>
+                <table class="collapsible-header">                
+                <tr>
+                  <td><i class="material-icons">label_outline</i>  Numero de Receta</td>
+                  <td><i class="material-icons">assignment</i>  Nombre</td>
+                  <td><i class="material-icons">my_location</i>  Lugar</td>
+                </tr>                
+                </table>
+                <div class="collapsible-body">
+                  <table class="contenedorTabla">
+                    <th>ingredientes </th>
+                    <th>pasos </th>
+                    <tr>  <td> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed  </td>
+                      <td>  Lorem ipsum dolor sit. </td>
+                    </tr>
+                  </table>
+                </div>
+
+              </li>
+
+            </ul>
+         
+</div>
+
+{{outlet}}
+
