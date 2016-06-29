@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multi-Borad</title>
+		<script type="text/javascript" src="libs/jquery-3.0.0.min.js"></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script type="text/javascript" src="libs/jquery.toast.js"></script>
+	<!--<link rel="stylesheet" type="text/css" href="libs/jquery.toast.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="libs/jquery.toast.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+	<script type="text/javascript" src="libs/socket.io.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/canvas.js"></script>
+
+</head>
+<body id="cuerpo">
+	<audio src="mp3/01.mp3" autoplay="autoplay" preload="" type="audio/mpeg">
+
+</audio>
+<section id="usuariosConectados">
+	<div id="numeroUsuarios"></div>
+	<ul id="listaUsuarios">
+
+	</ul>
+	<hr>
+</section>
+<div class="modal-01 modal-box animated fadeInLeft">
+        <div class="modal-login">
+          <!--<img src="people.png" alt="">-->
+          <h2>Welcome To</h2>
+          <h2>Multiple-Board</h2>
+          <input id="usuario" class="login-input animated zoomIn infinite" onclick="stopZoomIn();" type="text" name="name" placeholder="Set Your Name Here" required>
+          <br>
+          <br>
+					<div class="boton" onclick="ingresarChat(); hide();">
+          		<a id="demo01" href="#modal-01" onclick="">Join to grup</a>
+          </div>
+
+        </div>
+      </div>
+<!--<div id="login" class="loginChat">
+	<label>Usuario</label><input id="usuario"/>
+		<button onclick="ingresarChat()">Ingresar</button>
+</div>-->
+<div id="herramientas">
+	<button onclick="deslizar()" id="herra"type="button" style="background-image: url(imgs/herr.svg); width: 43px;height: 48px;background-repeat: no-repeat;"name="button"></button>
+<div id="deslisar" >
+	<button id="pintar" style="background-image: url(imgs/P3.png); width: 43px;height: 48px;background-repeat: no-repeat;"></button>
+	<button style="background-image: url(imgs/borrador.svg); width: 43px;height: 48px; background-repeat: no-repeat;"id="borrar"></button>
+	<button style="background-image: url(imgs/texto2.svg); width: 43px;height: 48px;background-repeat: no-repeat;"id="escribir"></button>
+</div>
+</div>
+
+<input id="texto" class="texto" placeholder="Ingresar texto"/>
+
+</body>
+</html>

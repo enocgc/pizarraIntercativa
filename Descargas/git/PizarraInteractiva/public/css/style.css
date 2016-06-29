@@ -1,0 +1,162 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #222;
+}
+canvas{
+  cursor:  url('../imgs/P3.png'), pointer;
+	position: absolute;
+	background: white;
+	float: initial;
+	z-index: -100;
+}
+h2 {
+	margin-bottom: 10px;
+}
+li{
+	font-weight: bold;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+hr{
+	opacity: 0.1;
+	width: 90%
+}
+
+#usuariosConectados{
+	float: left;
+	color: white;
+	width: 150px;
+	overflow-y:hidden;
+	overflow-x:hidden;
+}
+
+#herramientas {
+	width: 56%;
+	display: none;
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+}
+#deslisar{
+	display: none;
+
+	position: absolute;
+	width: 19%;
+	bottom: 0px;
+	left: 47px;
+
+}
+.loginChat{
+	width: 20%;
+	margin-left: 42%;
+	background-color: white;
+	box-shadow: 3px 3px 3px;
+	margin-top: 20%;
+	position: absolute;
+	padding: 10px;
+}
+.loginChat label,input,button{
+	margin-bottom: 10px;
+		width: 90%;
+		text-align: center;
+}
+
+#herramientas button{
+	background-color: white;
+	border: 10px;
+	box-shadow:4px 4px 4px;
+	border-radius: 6px;
+
+}
+
+.texto{
+	text-align: left;
+	position: absolute;
+	z-index: 1;
+	background-color: rgba(255,255,255,0);
+	border: 0;
+	width: auto;
+	height: auto;
+	display: none;
+	outline:0px;
+}
+
+/* //////////////////////////////////////////////////////MODAL//////////////////////////////////////////////////////*/
+.modal-box {
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-image: url("../imgs/people.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+}
+
+.modal-login{
+  z-index: 10;
+  display: block;
+  margin-top: 260px;
+	text-align: center;
+}
+
+h2 {
+  color: white;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+a{
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+}
+.boton {
+	height:35px;
+	width: 130px;
+	margin: auto;
+	cursor: pointer;
+	padding-top: 10px;
+	text-align: center;
+	border-radius: 2px;
+	background: #c71056;
+	-webkit-transition: background-color 2s ease-out;
+ -moz-transition: background-color 2s ease-out;
+ -o-transition: background-color 2s ease-out;
+ transition: width 0.50s ,background-color 2s ease-out;
+}
+
+.boton:hover{
+	background-color: #ffaf19;
+	width: 160px;
+}
+
+.login-input{
+	color:white;
+  width: 150px;
+	; cursor: pointer;
+  text-align: center;
+	border-radius: 6px;
+	border-color: transparent;
+	border-bottom-color: teal;
+	background-color: transparent;
+	transition: width 0.50s !important;
+}
+.login-input:hover{
+
+	transition: width 2s;
+	width: 200px;
+}
+
+#icon{
+	position: absolute;
+	background: url("../imgs/user.png");
+	background-repeat: no-repeat;
+	margin-left:10px;
+	border: none;
+}
